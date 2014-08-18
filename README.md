@@ -14,7 +14,7 @@ $ npm install --save base64-regex
 var base64Regex = require('base64-regex');
 
 base64Regex().test('dW5pY29ybg==');
-// => true
+//=> true
 
 base64Regex().exec('Hello this is dW5pY29ybg==')[0].trim();
 //=> dW5pY29ybg==
