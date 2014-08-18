@@ -1,0 +1,29 @@
+{
+  "name": "base64-regex",
+  "version": "1.0.0",
+  "description": "Regular expression for matching base64 encoded strings",
+  "license": "MIT",
+  "repository": "kevva/base64-regex",
+  "author": {
+    "name": "Kevin Mårtensson",
+    "email": "kevinmartensson@gmail.com",
+    "url": "https://github.com/kevva"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "base64",
+    "regex",
+    "string"
+  ],
+  "devDependencies": {
+    "ava": "0.0.4"
+  }
+}
