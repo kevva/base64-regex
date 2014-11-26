@@ -13,13 +13,10 @@ $ npm install --save base64-regex
 ```js
 var base64Regex = require('base64-regex');
 
-base64Regex().test('dW5pY29ybg==');
+base64Regex().test('dW5pY29ybg== foo bar');
 //=> true
 
-base64Regex().exec('Hello this is dW5pY29ybg==')[0].trim();
-//=> dW5pY29ybg==
-
-'Multiple dW5pY29ybg== Ym9hdA== base64 encoded strings'.match(base64Regex());
+'foo dW5pY29ybg== bar Ym9hdA=='.match(base64Regex());
 //=> ['dW5pY29ybg==', 'Ym9hdA==']
 ```
 
