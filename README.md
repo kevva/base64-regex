@@ -16,6 +16,12 @@ var base64Regex = require('base64-regex');
 base64Regex().test('dW5pY29ybg== foo bar');
 //=> true
 
+base64Regex({ exact: true }).test('dW5pY29ybg== foo bar');
+//=> false
+
+base64Regex({ exact: true }).test('dW5pY29ybg==');
+//=> true
+
 'foo dW5pY29ybg== bar Ym9hdA=='.match(base64Regex());
 //=> ['dW5pY29ybg==', 'Ym9hdA==']
 ```
