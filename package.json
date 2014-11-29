@@ -1,6 +1,6 @@
 {
   "name": "base64-regex",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Regular expression for matching base64 encoded strings",
   "license": "MIT",
   "repository": "kevva/base64-regex",
