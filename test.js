@@ -1,7 +1,7 @@
 'use strict';
 
-var base64Regex = require('./');
 var test = require('ava');
+var base64Regex = require('./');
 
 test('match base64 encoded string', function (t) {
 	t.plan(3);
