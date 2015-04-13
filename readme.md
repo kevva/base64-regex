@@ -1,4 +1,4 @@
-# base64-regex [![Build Status](http://img.shields.io/travis/kevva/base64-regex.svg?style=flat)](https://travis-ci.org/kevva/base64-regex)
+# base64-regex [![Build Status](https://travis-ci.org/kevva/base64-regex.svg?branch=master)](https://travis-ci.org/kevva/base64-regex)
 
 > Regular expression for matching base64 encoded strings
 
