@@ -5,5 +5,5 @@ module.exports = function (opts) {
 	var regex = '(?:[A-Za-z0-9+\/]{4}\\n?)*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)';
 
 	return opts.exact ? new RegExp('(?:^' + regex + '$)') :
-						new RegExp('(?:^|\\s)' + regex, 'g');
+						new RegExp(regex, 'g');
 };

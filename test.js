@@ -1,5 +1,4 @@
 'use strict';
-
 var test = require('ava');
 var base64Regex = require('./');
 
@@ -12,8 +11,8 @@ test('match base64 encoded string', function (t) {
 	];
 
 	fixtures.forEach(function (el) {
-		t.assert(base64Regex().test(el), el);
+		t.assert(base64Regex({exact: true}).test(el), el);
 	});
 
-	t.assert(base64Regex().exec('asdasd dgggghey dW5pY29ybg== helllo')[0].trim() === 'dW5pY29ybg==');
+	t.assert(base64Regex().exec('asdasd dgggghey dW5pY29ybg== helllo')[0] === 'dW5pY29ybg==');
 });
