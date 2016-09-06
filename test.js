@@ -1,18 +1,15 @@
-'use strict';
-var test = require('ava');
-var base64Regex = require('./');
+import test from 'ava';
+import m from './';
 
-test('match base64 encoded string', function (t) {
-	t.plan(3);
+const fixtures = [
+	'dW5pY29ybg==',
+	'Ym9hdA=='
+];
 
-	var fixtures = [
-		'dW5pY29ybg==',
-		'Ym9hdA=='
-	];
+test('match base64 encoded string', t => {
+	for (const x of fixtures) {
+		t.true(m({exact: true}).test(x));
+	}
 
-	fixtures.forEach(function (el) {
-		t.assert(base64Regex({exact: true}).test(el), el);
-	});
-
-	t.assert(base64Regex().exec('asdasd dgggghey dW5pY29ybg== helllo')[0] === 'dW5pY29ybg==');
+	t.is(m().exec('asdasd dgggghey dW5pY29ybg== helllo')[0], 'dW5pY29ybg==');
 });
