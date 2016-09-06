@@ -17,6 +17,6 @@ test('match base64 encoded string', t => {
 
 test('match inline sourcemaps', t => {
 	for (const x of fixtures) {
-		t.true(m().test(x.split('data:application/json;base64,').pop()));
+		t.true(m({exact: true}).test(x.split('data:application/json;base64,').pop().trim()));
 	}
 });
