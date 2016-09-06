@@ -13,7 +13,7 @@ $ npm install --save base64-regex
 ## Usage
 
 ```js
-var base64Regex = require('base64-regex');
+const base64Regex = require('base64-regex');
 
 base64Regex().test('dW5pY29ybg== foo bar');
 //=> true
@@ -31,17 +31,18 @@ base64Regex({exact: true}).test('dW5pY29ybg==');
 
 ## API
 
-### base64Regex(options)
+### base64Regex([options])
 
 Returns a regex for matching base64 encoded strings.
 
-#### options.exact
+#### options
 
-Type: `boolean`  
+##### exact
+
+Type: `boolean`
 Default: `false` *(Matches any base64 in a string)*
 
-Only match an exact string.  
-Useful with `RegExp#test` to check if a string is a base64 encoded string.
+Only match an exact string. Useful with `RegExp#test` to check if a string is a base64 encoded string.
 
 
 ## License
