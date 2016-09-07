@@ -39,7 +39,7 @@ Returns a regex for matching base64 encoded strings.
 
 ##### exact
 
-Type: `boolean`
+Type: `boolean`<br>
 Default: `false` *(Matches any base64 in a string)*
 
 Only match an exact string. Useful with `RegExp#test` to check if a string is a base64 encoded string.
