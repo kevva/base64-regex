@@ -1,6 +1,6 @@
-import test from 'ava';
-import fixtures from './fixtures';
-import m from './';
+const test = require('ava');
+const fixtures = require('./fixtures');
+const m = require('.');
 
 test('match base64 encoded string', t => {
 	const fixtures = [

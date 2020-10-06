@@ -1,7 +1,7 @@
 'use strict';
 
-module.exports = opts => {
-	opts = Object.assign({}, opts);
+module.exports = options => {
+	options = Object.assign({}, options);
 	const regex = '(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)';
-	return opts.exact ? new RegExp(`(?:^${regex}?$)`) : new RegExp(regex, 'g');
+	return options.exact ? new RegExp(`(?:^${regex}?$)`) : new RegExp(regex, 'g');
 };
